@@ -12,6 +12,12 @@ repositories {
 	maven { url "https://api.modrinth.com/maven" }
 	maven { url "https://maven.enginehub.org/repo/" }
 	maven { url "https://maven.gegy.dev/releases/" }
+	
+	// Accessories
+	maven { url 'https://maven.wispforest.io/releases' }
+	maven { url 'https://maven.su5ed.dev/releases' }
+	maven { url 'https://maven.fabricmc.net' }
+	
 	mavenCentral()
 }
 
@@ -45,6 +51,8 @@ dependencies {
 	}
 
 	modImplementation "dev.gegy:player-roles-api:1.6.11"
+	
+	modImplementation "io.wispforest:accessories-fabric:1.1.0-beta.35+1.21.1"
 
 	shade(libs.nettyIoUringClasses) { transitive = false }
 	shade(variantOf(libs.nettyIoUringNative) { classifier "linux-x86_64" }) { transitive = false }
